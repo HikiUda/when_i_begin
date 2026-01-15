@@ -1,0 +1,132 @@
+.how-it-works {
+	&+* {
+		margin-top: 110px;
+	}
+
+	&__container {}
+
+	&__title {
+		@include baseFont(36px, $cl-base2);
+
+		&+* {
+			margin-top: 40px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		gap: 25%;
+
+		&:last-child {
+			justify-content: end;
+		}
+
+		@media(max-width: 991px) {
+			gap: 10%;
+		}
+
+		@media(max-width: 767px) {
+			gap: 20px;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__content-block {
+		flex: 0 0 25%;
+		padding: 30px 15px;
+
+		@media(max-width: 991px) {
+			flex: 0 0 35%;
+		}
+
+		@media(max-width: 767px) {
+			flex: 1 1 auto;
+			max-width: 270px;
+		}
+	}
+
+	&__up {
+		display: flex;
+		align-items: center;
+		gap: 13px;
+
+		&+* {
+			margin-top: 18px;
+		}
+	}
+
+	&__icon {}
+
+	&__block-title {
+		@include baseFont(16px, $cl-base2);
+	}
+
+	&__text {
+		@extend %simpletext1;
+		color: $cl-base1;
+	}
+
+	&__progress-line {
+		@media(min-width: 767px) {
+			position: relative;
+			height: 1px;
+			width: 100%;
+			background: #000;
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				height: 10px;
+				width: 10px;
+				border-radius: 50%;
+				background: #000;
+				top: -5px;
+			}
+
+			&::before {
+				left: 0;
+			}
+
+			&::after {
+				right: 0;
+			}
+		}
+
+	}
+
+	&__up-mark {
+		@media(min-width: 767px) {
+			position: relative;
+
+			&:before {
+				content: '';
+				width: 1px;
+				height: 20px;
+				background: #000;
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+
+	}
+
+	&__down-mark {
+		@media(min-width: 767px) {
+			position: relative;
+
+			&:before {
+				content: '';
+				width: 1px;
+				height: 20px;
+				background: #000;
+				position: absolute;
+				left: 0;
+				bottom: 0;
+			}
+		}
+
+	}
+}

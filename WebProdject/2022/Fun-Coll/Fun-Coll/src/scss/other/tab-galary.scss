@@ -1,0 +1,32 @@
+.tab-galary {
+
+	&__container {
+		max-width: 880px;
+
+		margin-bottom: 40px;
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 25px;
+	}
+
+	&__button {
+		font-weight: 600;
+		font-size: 14px;
+		padding: 6px 16px;
+		line-height: 2;
+
+		opacity: 0.5;
+		border: 1px solid #454647;
+		border-radius: 20px;
+		transition: all 0.3s ease;
+
+		&._active {
+			opacity: 1;
+			border: none;
+			background-color: #FFF799;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	@@include('html/head.html',{
+	"title":"About"
+	})
+</head>
+
+<body>
+	@@include('html/header.html',{
+	"number": "0",
+	})
+	<main class="main">
+		<section class="intro-about">
+			<ul class="tree-of-site__list">
+				<li>
+					<a href="index.html" class="tree-of-site__link">Home</a>
+				</li>
+			</ul>
+			<h1 class="intro-about__title">About Us</h1>
+			<div class="intro-about__bg">
+				<img src="@img/home-slider/bg-about.jpg" alt="bg">
+			</div>
+		</section>
+	</main>
+
+	@@include('html/footer.html',{})
+	@@include('html/script.html',{})
+</body>
+
+</html>

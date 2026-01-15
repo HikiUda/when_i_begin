@@ -1,0 +1,25 @@
+$cl-base1: #5A5A5A;
+$cl-base2: #363838;
+$cl-text1: #707070;
+$cl-text2: #A1A1A1;
+
+//=======================================
+
+body {
+	font-family: OpenSans, serif;
+	font-weight: 400;
+	font-size: 16px;
+	color: $cl-base1;
+
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+.wrapper-grid {}
+
+[class*="__container"] {
+	margin: 0 auto;
+	max-width: 1140px;
+	padding: 0 15px;
+}

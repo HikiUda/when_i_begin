@@ -1,0 +1,171 @@
+.how-it-work {
+	padding: 50px 0;
+
+	&__container {}
+
+	&__up-row {
+		padding: clamp(1.875rem, 0.161rem + 8.57vw, 7.5rem) 0;
+		display: flex;
+		gap: clamp(2.5rem, 0.671rem + 9.14vw, 8.5rem);
+		align-items: flex-end;
+
+		@media(max-width: 1390px) {
+			align-items: center;
+		}
+
+		@media(max-width: 992px) {
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__block {
+		min-width: 400px;
+
+		@media(max-width: 992px) {
+			min-width: auto;
+			max-width: 582px;
+			text-align: center;
+		}
+	}
+
+	&__sup-title {}
+
+	&__title {}
+
+	&__text {
+		font-weight: 500;
+		max-width: 671px;
+
+		@media(max-width: 992px) {
+			text-align: center;
+		}
+	}
+
+	&__steps {}
+}
+
+.steps {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: clamp(1.875rem, 0.637rem + 6.19vw, 5.938rem);
+
+	@media(max-width: 992px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media(max-width: 678px) {
+		grid-template-columns: repeat(1, 1fr);
+	}
+
+	&__step {
+
+		&:nth-child(6n + 2) {
+			margin-top: 286px;
+
+			@media(max-width: 678px) {
+				margin-top: 0;
+			}
+		}
+
+		&:nth-child(6n + 3) {
+			margin-top: 54px;
+
+			@media(max-width: 992px) {
+				margin-top: -210px;
+			}
+
+			@media(max-width: 678px) {
+				margin-top: 0;
+			}
+		}
+
+		&:nth-child(6n + 4) {
+			margin-top: -150px;
+
+			@media(max-width: 992px) {
+				margin-top: 0;
+			}
+		}
+
+		&:nth-child(6n + 5) {
+			margin-top: 136px;
+
+			@media(max-width: 992px) {
+				margin-top: -210px;
+			}
+
+			@media(max-width: 678px) {
+				margin-top: 0;
+			}
+		}
+
+		&:nth-child(6n + 6) {
+			margin-top: -96px;
+
+			@media(max-width: 678px) {
+				margin-top: 0;
+			}
+		}
+
+		@media(max-width: 678px) {
+			max-width: 390px;
+			margin: 0 auto;
+		}
+	}
+
+	&__title {
+		font-family: 'Georgia';
+		font-weight: 700;
+		font-size: 30px;
+		color: #000000;
+		position: relative;
+		padding-top: 135px;
+		padding-left: 88px;
+
+		&::before {
+			content: attr(data-number);
+			position: absolute;
+			top: 0;
+			left: 0;
+			font-weight: 400;
+			font-size: 150px;
+			color: var(--main-color);
+			opacity: 0.2;
+		}
+
+		&+* {
+			margin-top: 55px;
+		}
+	}
+
+	&__text {
+		font-weight: 500;
+
+		&+* {
+			margin-top: 60px;
+		}
+	}
+
+	&__image {
+		position: relative;
+		padding-bottom: 126%;
+
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__title_2 {
+		padding-left: 70px;
+	}
+
+	&__title_3 {
+		padding-left: 120px;
+	}
+}

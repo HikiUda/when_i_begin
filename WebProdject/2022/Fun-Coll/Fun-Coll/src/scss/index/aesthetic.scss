@@ -1,0 +1,41 @@
+.aesthetic {
+	padding: clamp(3.75rem, 1.471rem + 13.02vw, 10.75rem) 0 clamp(3.125rem, 0.968rem + 12.33vw, 9.75rem);
+	position: relative;
+
+	background: rgba($color: #fff, $alpha: 0.6);
+
+	&+* {
+		margin-top: 80px;
+	}
+
+	&__container {}
+
+	&__title {
+		@include baseFont(60px, $cl-base2);
+		max-width: 650px;
+		text-align: left;
+
+		&+* {
+			margin-top: 45px;
+		}
+
+		@media(max-width: 1140px) {
+			font-size: clamp(2.5rem, 2.093rem + 2.33vw, 3.75rem);
+		}
+	}
+
+	&__text {
+		@include textUpLine(200px, -25px);
+		@extend %simpletext1;
+		color: $cl-base1;
+		max-width: 540px;
+	}
+
+	&__bg {
+		@extend %imageAbsolute;
+
+		& img {
+			z-index: -1;
+		}
+	}
+}

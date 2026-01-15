@@ -1,0 +1,69 @@
+:root {
+	--main-color: #01996D;
+	--main-btn-color: #01684b;
+	--text-color: #484848;
+	--block-color: #245852;
+	--menu-link-color: #292929;
+}
+
+// MIXIN 
+
+$maxWidth: 1370;
+
+@mixin adaptiv-font($pcSize, $mobSize) {
+	$addSize: $pcSize - $mobSize;
+	font-size: #{$pcSize + px};
+
+	@media(max-width: #{$maxWidth + px}) {
+		$maxWidth: $maxWidth - 320;
+		font-size: calc(#{$mobSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth}));
+	}
+}
+
+//=======================
+
+body {
+	font-family: Lato, serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 1.5;
+	color: var(--text-color);
+
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+[class*='__container'] {
+	margin: 0 auto;
+	max-width: 1400px;
+	padding: 0 15px;
+}
+
+.green-button {
+	display: inline-flex;
+	padding: 20px 50px;
+	background-color: var(--main-color);
+	color: #fff;
+	border: 1px solid var(--main-color);
+	border-radius: 4px;
+	transition: background 0.3s ease;
+
+	@media(any-hover: hover) {
+		&:hover {
+			background-color: var(--main-btn-color);
+		}
+	}
+}
+
+.title {
+	font-family: 'Georgia';
+	font-weight: 700;
+	@include adaptiv-font(50, 30);
+	color: var(--main-color);
+}
+
+.sup-title {
+	font-weight: 600;
+	font-size: 24px;
+}

@@ -1,0 +1,15 @@
+.index-galary {
+	&+* {
+		margin-top: 90px;
+	}
+
+	&__page {}
+}
+
+.galary-page {
+	display: none;
+
+	&._active {
+		display: block;
+	}
+}

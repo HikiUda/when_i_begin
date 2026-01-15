@@ -1,0 +1,119 @@
+.footer {
+	background: #DFDFDF;
+
+	&__container {}
+
+	&__row {
+		display: flex;
+		padding: clamp(2.5rem, 2.078rem + 2.41vw, 3.75rem) 0 clamp(3.125rem, 2.492rem + 3.61vw, 5rem);
+
+		@media(max-width: 991px) {
+			flex-direction: column;
+			gap: 30px;
+		}
+	}
+
+	&__content {
+		flex: 0 0 50%;
+	}
+
+	&__title {
+		@include baseFont(16px, $cl-base2);
+		text-align: start;
+
+		&+* {
+			margin-top: 14px;
+		}
+	}
+
+	&__text {
+		@extend %simpletext1;
+		max-width: 476px;
+
+		&+* {
+			margin-top: 16px;
+		}
+	}
+
+	&__outemail {
+		@include simpleText2($cl-base1);
+
+		& i {
+			margin-right: 10px;
+		}
+
+		&+* {
+			margin-top: 22px;
+		}
+	}
+
+	&__send-email {
+		display: flex;
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+
+	&__input {
+		flex: 0 1 370px;
+		@extend %inputArea;
+		padding: 6px 18px;
+	}
+
+	&__button {
+		flex: 0 1 160px;
+		@extend %buttonBlack;
+		padding: 6px 0px;
+	}
+
+	&__messangers {
+		flex: 0 0 50%;
+		display: flex;
+
+		justify-content: space-around;
+
+		@media(min-width: 500px) {
+			padding: 0 100px;
+			justify-content: space-between;
+		}
+
+		@media(max-width: 320px) {
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			gap: 20px;
+		}
+	}
+
+	&__list {
+
+		& li+li {
+			margin-top: 15px;
+		}
+	}
+
+	&__link {
+		@include simpleText2($cl-text1);
+
+		& i {
+			margin-right: 12px;
+		}
+
+		transition: opacity 0.3s ease;
+
+		@media(any-hover: hover) {
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+	}
+
+	&__sub-row {
+		padding: 42px 0;
+		background: $cl-base2;
+	}
+
+	&__bottom {
+		color: $cl-text2;
+		text-align: center;
+	}
+}

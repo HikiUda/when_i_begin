@@ -1,0 +1,162 @@
+.our-product {
+	padding-top: clamp(1.875rem, 0.161rem + 8.57vw, 7.5rem);
+	padding-bottom: clamp(1.875rem, -0.792rem + 13.33vw, 10.625rem);
+
+	&__container {}
+
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		gap: 86px;
+
+		@media(max-width: 1220px) {
+			flex-direction: column-reverse;
+			align-items: center;
+		}
+	}
+
+	&__card {
+		max-width: 700px;
+		padding-left: 60px;
+		padding-bottom: 74px;
+		position: relative;
+
+		@media(max-width: 678px) {
+			padding-left: 0;
+			padding-bottom: 100px;
+		}
+
+		@media(max-width:520px) {
+			padding: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		max-width: 584px;
+
+		@media(max-width: 992px) {
+			text-align: center;
+		}
+	}
+
+	&__sup-tilte {
+		&+* {
+			margin-top: 10px;
+		}
+	}
+
+	&__title {
+		&+* {
+			margin-top: 20px;
+		}
+	}
+
+	&__text {
+		&+* {
+			margin-top: 40px;
+		}
+	}
+
+	&__button {}
+
+	&__customized {}
+}
+
+.customized {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 296px;
+	height: 293px;
+	background-color: #fff;
+	padding: 26px 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: #000;
+	filter: drop-shadow(0px 3.62249px 18.1125px rgba(165, 165, 165, 0.25));
+
+	@media(max-width: 678px) {
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	@media(max-width:520px) {
+		left: auto;
+		transform: translateX(0);
+		position: relative;
+		margin-top: 30px;
+	}
+
+	&__title {
+		font-weight: 600;
+		font-size: 14px;
+		padding-bottom: 7px;
+		border-bottom: #000 solid 1px;
+
+		&+* {
+			margin-top: 14px;
+		}
+	}
+
+	&__photo {
+		height: 57px;
+		width: 57px;
+		position: relative;
+
+		&+* {
+			margin-top: 10px;
+		}
+
+		& img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			border-radius: 50%;
+		}
+	}
+
+	&__name {
+		font-size: 12px;
+
+		&+* {
+			margin-top: 20px;
+		}
+	}
+
+	&__title-list {
+		font-family: 'Georgia';
+		font-weight: 700;
+		font-size: 16px;
+
+		&+* {
+			margin-top: 16px;
+		}
+	}
+
+	&__list {
+		font-size: 10px;
+		list-style: disc;
+
+		& li+li {
+			margin-top: 16px;
+		}
+	}
+}
