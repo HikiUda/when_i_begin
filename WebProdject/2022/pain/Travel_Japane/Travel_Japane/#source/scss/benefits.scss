@@ -1,0 +1,90 @@
+//BENEFITS================================
+.main {
+
+	&__benefits {}
+}
+
+.benefits {
+	margin: -225px 0 130px 0;
+
+	&__container {}
+
+	&__block {
+		padding: 100px;
+		background: #FFFFFF;
+		box-shadow: 0px 2px 20px rgba(21, 24, 36, 0.15993);
+	}
+
+	&__title {
+		@extend %block-title;
+		margin: 0 0 120px 0;
+
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -25px;
+	}
+
+	&__column {
+		flex: 0 0 33.333%;
+		display: flex;
+		padding: 0 25px;
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__icon {
+		margin: 0 0 37px;
+	}
+
+	&__body-title {
+		margin: 0 0 26px 0;
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.33;
+		color: #000000;
+	}
+
+	&__text {
+		margin: 0 0 39px 0;
+	}
+
+	&__link {
+		@extend %blue-arrow;
+	}
+
+	@media(max-width: 991px) {
+		margin: -175px 0 130px 0;
+
+		&__column {
+			flex: 0 0 50%;
+			margin: 0 0 20px 0;
+		}
+
+		&__block {
+			padding: 70px 70px 50px;
+		}
+
+	}
+
+	@media(max-width: 767px) {
+		margin: -100px 0 50px 0;
+
+		&__column {
+			flex: 0 0 100%;
+		}
+
+		&__block {
+			padding: 50px;
+		}
+	}
+
+	@media (orientation: landscape) {
+		margin-top: 50px;
+	}
+}

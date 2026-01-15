@@ -1,0 +1,306 @@
+//SAMPLE===========================================
+
+%block-title {
+	font-weight: 500;
+	font-size: 35px;
+	line-height: 42px;
+	color: #102746;
+}
+
+%blue-arrow {
+	display: flex;
+	align-items: center;
+
+	& .blue-link {
+		color: #006DFE;
+		text-transform: uppercase;
+		margin: 0 30px 0 0;
+	}
+
+
+	& a {
+		display: flex;
+		align-items: center;
+		transition: all 0.3s ease;
+	}
+
+	& a:hover,
+	a:focus,
+	a:active {
+		opacity: 0.75;
+	}
+}
+
+%title-blue-line {
+	&::after {
+		content: '';
+		height: 3px;
+		width: 253px;
+		background-color: #006DFE;
+		position: absolute;
+		bottom: -7px;
+		left: 0;
+	}
+}
+
+//COMMON======================================
+body {
+	font-family: Lato sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	font-size: 16px;
+
+	@media(max-width: 991px) {
+		&.lock {
+			overflow: hidden;
+		}
+	}
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+[class*='__container'] {
+	max-width: 1282px;
+	margin: 0 auto;
+	padding: 0 10px;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+
+//IMPORT============================
+
+@import 'nullstyle.scss';
+@import 'fonts.scss';
+@import 'header.scss';
+@import 'benefits.scss';
+@import 'trip.scss';
+@import 'tottori.scss';
+@import 'top-places.scss';
+
+//INTRO=====================================
+.main {
+
+	&__intro {}
+}
+
+.intro {
+	min-height: 100vh;
+	background: center/cover no-repeat;
+	padding: 263px 0 0 0;
+
+	&__container {}
+
+	&__body {}
+
+	&__title {
+		max-width: 619px;
+		font-weight: 500;
+		font-size: 50px;
+		line-height: 1.2;
+
+		color: #FFFFFF;
+		margin: 0 0 22px 0;
+	}
+
+	&__text {
+		max-width: 546px;
+		color: #fff;
+		margin: 0 0 59px 0;
+	}
+
+	&__search-form {}
+
+	@media(max-width: 991px) {
+		padding: 150px 0 0 0;
+
+		&__title {
+			font-size: 30px;
+		}
+	}
+
+	@media(max-width: 676px) {
+		padding: 100px 0 0 0;
+	}
+}
+
+//SEARCH-FROM===========================================
+.search-form {
+
+	&__row {}
+
+	&__info {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__input {
+		max-width: 296px;
+		background: transparent url('../../img/intro/Oval.svg') left 7px no-repeat;
+		border-bottom: 2px solid #BFC0C5;
+		padding: 0 0 23px 43px;
+		margin: 0 61px 0 0;
+
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.33;
+		color: #FFFFFF;
+	}
+
+	&__input::placeholder {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.33;
+		color: #FFFFFF;
+	}
+
+	&__button {
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 1.2;
+		color: #FFFFFF;
+		text-transform: uppercase;
+
+		background: #1B7DFF;
+		padding: 15px 39px;
+		transition: all 0.3s ease;
+	}
+
+	&__button:hover,
+	&__button:focus,
+	&__button:active {
+		background-color: #1767d1;
+	}
+
+	@media(max-width: 991px) {
+		&__input {
+			margin: 0 61px 30px 0;
+		}
+	}
+
+	@media(max-width: 767px) {
+		&__input {
+			flex: 0 0 100%;
+			margin: 0 0px 30px 0;
+		}
+	}
+
+	@media (orientation: landscape) {
+		&__button {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+//VIDEO===============================
+.main {
+
+	&__video {}
+}
+
+.video {
+	height: 609px;
+	width: 100%;
+
+	&__image {
+		height: 100%;
+		width: 100%;
+	}
+
+	&__image img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	@media(max-width: 767px) {
+		height: 300px;
+	}
+}
+
+//FOOTER	=====================================
+.footer {
+	padding: 120px 0;
+	background: #0E1D28;
+
+	&__container {}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	&__logo {
+		flex: 0 0 50%;
+	}
+
+	&__contact {
+		flex: 0 0 50%;
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__column {
+		flex: 0 0 33.333%;
+	}
+
+	&__column-title {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 1.33;
+		color: #FFFFFF;
+		margin: 0 0 4px 0;
+	}
+
+	&__menu {}
+
+	&__list {}
+
+	&__list li {
+		margin: 0 0 4px 0;
+	}
+
+	&__link {
+		color: #fff;
+		transition: all 0.3s ease;
+	}
+
+	&__link:hover {
+		opacity: 0.75;
+	}
+
+	@media(max-width: 991px) {
+		padding: 50px 0;
+
+		&__logo {
+			flex: 0 0 100%;
+			margin: 0 0 30px 0;
+			text-align: center;
+		}
+
+		&__contact {
+			flex: 0 0 100%;
+			justify-content: space-around;
+		}
+
+		&__column {
+			flex: 0 0 auto;
+		}
+	}
+
+	@media(max-width: 565px) {
+		&__contact {
+			flex-direction: column;
+		}
+
+		&__column {
+			margin: 0 0 20px 0;
+		}
+	}
+}

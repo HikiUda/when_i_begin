@@ -1,0 +1,9 @@
+.first-icon {
+	font-size: 100px;
+	padding: 100px;
+}
+
+.first-icon::before {
+	margin-right: 10px;
+
+}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html',{
+"title":"Travello"
+})
+
+<body>
+	@@include('html/header.html', {})
+	<main class="main">
+		<section class="intro">
+			<div class="intro__container">
+				<div class="intro__header">
+					<h3 class="intro__sup-title">the travel guide app</h3>
+					<h1 class="intro__title">Travello</h1>
+					<h4 class="intro__sub-title">Travel booking just a click away</h4>
+					<form action="" class="intro__search">
+						<input type="text" class="intro__input" placeholder="Where do you want to go?">
+						<button class="intro__button _icon-search"></button>
+					</form>
+				</div>
+				<div class="intro__cards">
+					<div class="intro__body">
+						<img src="@img/intro-cards/1.svg" alt="1">
+						<h4 class="intro__card-title">100+ Options</h4>
+						<div class="intro__card-text">
+							<p>At in proin consequat ut cursus venenatis sapien.</p>
+						</div>
+					</div>
+					<div class="intro__body">
+						<img src="@img/intro-cards/2.svg" alt="2">
+						<h4 class="intro__card-title">Good Quality</h4>
+						<div class="intro__card-text">
+							<p>At in proin consequat ut cursus venenatis sapien.</p>
+						</div>
+					</div>
+					<div class="intro__body">
+						<img src="@img/intro-cards/3.svg" alt="3">
+						<h4 class="intro__card-title">Easy Interface</h4>
+						<div class="intro__card-text">
+							<p>At in proin consequat ut cursus venenatis sapien.</p>
+						</div>
+					</div>
+					<div class="intro__body">
+						<img src="@img/intro-cards/4.svg" alt="4">
+						<h4 class="intro__card-title">Tracking Code</h4>
+						<div class="intro__card-text">
+							<p>At in proin consequat ut cursus venenatis sapien.</p>
+						</div>
+					</div>
+				</div>
+				<div class="intro__bottom">
+					<h2 class="intro__title-text">Easily Find awesome places to travel this year</h2>
+					<div class="intro__text">
+						<p>Leo elementum ac nisl donec eget turpis gravida. Sit tellus ultricies in urna, odio sagittis est
+							egestas vel. Venenatis amet, tempus porttitor dolor adipiscing nascetur. Neque commodo neque varius
+							tellus diam. Ultrices quam quisque sit eget integer pretium massa congue nunc.</p>
+					</div>
+				</div>
+			</div>
+			<div class="intro__bg">
+				<img src="@img/home/background.jpg" alt="">
+			</div>
+		</section>
+		<section class="hotel-tab">
+			<div class="hotel-tab__container">
+				<div class="hotel-tab__buttons" data-tab-buttons>
+					<button class="hotel-tab__button" data-tab-button data-tab-id="1">Singapore </button>
+					<button class="hotel-tab__button" data-tab-button data-tab-id="2">China</button>
+					<button class="hotel-tab__button" data-tab-button data-tab-id="3">India</button>
+					<button class="hotel-tab__button" data-tab-button data-tab-id="4">Bhutan</button>
+					<button class="hotel-tab__button" data-tab-button data-tab-id="5">Thailand</button>
+					<button class="hotel-tab__button" data-tab-button data-tab-id="6">Nepal</button>
+				</div>
+				<div class="hotel-tab__content">
+					<div class="hotel-tab__item" data-content>
+						@@include('html/elements/hotel-card.html',{})
+						@@include('html/elements/hotel-card.html',{})
+						@@include('html/elements/hotel-card.html',{})
+						@@include('html/elements/hotel-card.html',{})
+					</div>
+					<div class="hotel-tab__item" data-content>
+						@@include('html/elements/hotel-card.html',{})
+						@@include('html/elements/hotel-card.html',{})
+						@@include('html/elements/hotel-card.html',{})
+					</div>
+					<div class="hotel-tab__item" data-content>
+						@@include('html/elements/hotel-card.html',{})
+						@@include('html/elements/hotel-card.html',{})
+						<div class="hotel-card">
+							<div class="hotel-card__like _icon-like"></div>
+							<div class="hotel-card__image">
+								<img src="@img/home/background.jpg" alt="image">
+							</div>
+							<div class="hotel-card__body">
+								<h4 class="hotel-card__title">DoubleTree Montreal Hotel</h4>
+								<div class="hotel-card__stars" data-star="4">
+									<span class="hotel-card__star star-card _icon-star"></span>
+									<span class="hotel-card__star star-card _icon-star"></span>
+									<span class="hotel-card__star star-card _icon-star"></span>
+									<span class="hotel-card__star star-card _icon-star"></span>
+									<span class="hotel-card__star star-card _icon-star"></span>
+								</div>
+								<div class="hotel-card__price">
+									<span class="hotel-card__cross-out">$149</span>
+									<span class="hotel-card__discount">$99</span>
+									<span class="hotel-card__on-that">/night</span>
+								</div>
+								<div class="hotel-card__text">
+									<p>Habitasse quis morbi morbi nunc dignissim convallis vestibulum. Pharetra vel nulla quis
+										egestas dui, duis
+										nec vulputate nunc.</p>
+									<p>Habitasse quis morbi morbi nunc dignissim convallis vestibulum. Pharetra vel nulla quis
+										egestas dui, duis
+										nec vulputate nunc.</p>
+									<p>Habitasse quis morbi morbi nunc dignissim convallis vestibulum. Pharetra vel nulla quis
+										egestas dui, duis
+										nec vulputate nunc.</p>
+								</div>
+								<div class="hotel-card__benefit">You’re saving $50</div>
+								<button class="hotel-card__button">SELECT ROOMS</button>
+							</div>
+						</div>
+					</div>
+					<div class="hotel-tab__item" data-content>
+						@@include('html/elements/hotel-card.html',{})
+						@@include('html/elements/hotel-card.html',{})
+						@@include('html/elements/hotel-card.html',{})
+						@@include('html/elements/hotel-card.html',{})
+					</div>
+					<div class="hotel-tab__item" data-content>
+						@@include('html/elements/hotel-card.html',{})
+						@@include('html/elements/hotel-card.html',{})
+						@@include('html/elements/hotel-card.html',{})
+						@@include('html/elements/hotel-card.html',{})
+					</div>
+				</div>
+				<div class="hotel-tab__view-all-block">
+					<a href="#" class="hotel-tab__view-all">View all</a>
+				</div>
+			</div>
+		</section>
+		<section class="comment-slider">
+			<div class="comment-slider__container">
+				<div class="comment-slider__dicoretion">
+					<svg width="89" height="66" viewBox="0 0 89 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path
+							d="M20.2284 26.8206H20.2284C23.9044 26.8204 27.5051 27.8543 30.614 29.8025C33.7229 31.7507 36.2128 34.5333 37.7961 37.8283C39.3793 41.1232 39.9914 44.796 39.5617 48.4218C39.132 52.0477 37.678 55.4789 35.3676 58.3185C33.0571 61.1582 29.9844 63.2902 26.5048 64.4675C23.0252 65.6449 19.2811 65.8192 15.7058 64.9705C12.1305 64.1217 8.87052 62.2845 6.30275 59.6719C3.735 57.0594 1.96437 53.7782 1.19524 50.2081L1.08855 49.7129L1.00563 49.7319L0.974872 49.5265C0.974843 49.5263 0.974814 49.5261 0.974785 49.5259C0.886212 48.923 0.764398 48.0657 0.699301 47.1859L0.69944 47.1859L0.698288 47.1742C0.514622 45.2969 0.426072 42.6902 0.57575 39.5469C0.756187 36.4137 1.22217 32.7564 2.26189 28.9103C2.81091 26.9904 3.4814 25.0184 4.31193 23.0929C4.40946 22.8884 4.50614 22.6845 4.60252 22.4811C5.43377 20.7274 6.24269 19.0208 7.37646 17.452L7.38952 17.4339L7.40093 17.4147C8.49487 15.5758 9.9106 13.9502 11.3708 12.3761L11.3839 12.362L11.3959 12.3469C12.0332 11.5438 12.79 10.8603 13.5894 10.2037C13.8724 9.97123 14.1663 9.73795 14.4621 9.5032C14.9811 9.09119 15.506 8.67462 15.9878 8.24986C16.7315 7.63416 17.5307 7.12915 18.3452 6.65377C18.6201 6.49331 18.9007 6.33408 19.1819 6.17455C19.7215 5.8684 20.263 5.56113 20.7699 5.24194L20.7699 5.24205L20.7796 5.23567C21.497 4.76038 22.2486 4.41805 23.0096 4.11363C23.2784 4.00609 23.5559 3.90065 23.8344 3.79479C24.3182 3.61093 24.8053 3.42583 25.2559 3.2264C25.621 3.08542 25.969 2.94464 26.3033 2.80942C27.321 2.39776 28.2112 2.03764 29.0679 1.88058L29.0838 1.87766L29.0995 1.87371C29.7763 1.70369 30.3945 1.55253 30.9613 1.41396C31.3867 1.30996 31.7831 1.21304 32.1535 1.12055C32.1543 1.12035 32.155 1.12016 32.1558 1.11997L34.3193 0.601441L36.2448 8.24717L34.5428 8.95008L34.5414 8.95068L32.1687 9.92174C31.6456 10.0925 31.1517 10.3499 30.6747 10.6264C30.4567 10.7528 30.2371 10.8862 30.0187 11.0189C29.9949 11.0334 29.9712 11.0478 29.9474 11.0622C29.7037 11.2102 29.46 11.3574 29.2094 11.5002L29.1948 11.5085L29.1807 11.5178C28.8589 11.7311 28.5193 11.917 28.1521 12.1179C27.9782 12.2131 27.7982 12.3117 27.6109 12.4181C27.0506 12.7366 26.4625 13.1075 25.9449 13.6131C25.598 13.9318 25.2214 14.2233 24.8209 14.5331C24.6892 14.6351 24.5548 14.7391 24.4181 14.8467C23.8764 15.273 23.3157 15.7433 22.8351 16.3182L22.8293 16.3252L22.8237 16.3323C22.526 16.7161 22.1951 17.0635 21.8436 17.4326C21.7137 17.5691 21.5809 17.7085 21.4459 17.8538C20.9658 18.3708 20.4797 18.9418 20.1203 19.6349C20.1021 19.6623 20.0839 19.6899 20.0656 19.7174C19.3138 20.8522 18.5289 22.0369 18.015 23.4021C17.4906 24.3811 17.1662 25.4591 16.8654 26.4638L16.6409 27.2142L17.416 27.1021C17.4849 27.0921 17.5536 27.0821 17.622 27.0721C18.504 26.9438 19.3507 26.8206 20.2284 26.8206ZM65.6702 26.4638L65.4456 27.2142L66.2207 27.1021C66.2896 27.0921 66.3583 27.0821 66.4268 27.0721C67.3088 26.9438 68.1555 26.8206 69.0331 26.8206C72.7091 26.8204 76.3099 27.8543 79.4188 29.8025C82.5277 31.7507 85.0176 34.5333 86.6008 37.8283C88.1841 41.1232 88.7961 44.796 88.3664 48.4218C87.9367 52.0477 86.4827 55.4789 84.1723 58.3185C81.8618 61.1582 78.7891 63.2902 75.3095 64.4675C71.8299 65.6449 68.0858 65.8192 64.5105 64.9705C60.9353 64.1217 57.6753 62.2845 55.1075 59.6719C52.5397 57.0594 50.7691 53.7782 50 50.2081L49.8933 49.7129L49.8104 49.7319L49.7796 49.5265C49.7796 49.5265 49.7796 49.5265 49.7796 49.5264C49.691 48.9235 49.5691 48.0659 49.504 47.1859L49.5042 47.1859L49.503 47.1742C49.3194 45.297 49.2308 42.6903 49.3805 39.5473C49.5609 36.4139 50.0269 32.7565 51.0666 28.9103C51.6157 26.9904 52.2862 25.0183 53.1167 23.0929C53.2142 22.8884 53.3109 22.6844 53.4073 22.4811C54.2385 20.7274 55.0474 19.0208 56.1812 17.452L56.1943 17.4339L56.2057 17.4147C57.2996 15.5758 58.7153 13.9502 60.1756 12.3761L60.1885 12.3622L60.2003 12.3474C60.8376 11.5463 61.5945 10.8638 62.3939 10.2077C62.6755 9.9766 62.9677 9.74474 63.2618 9.5114C63.7825 9.09827 64.309 8.68054 64.7925 8.25429C65.5362 7.63858 66.3354 7.13357 67.1499 6.65818C67.4248 6.49772 67.7054 6.3385 67.9866 6.17897C68.5262 5.87281 69.0677 5.56554 69.5746 5.24634L69.5747 5.24648L69.5851 5.23952C70.302 4.76252 71.0542 4.42036 71.8159 4.11588C72.0771 4.01143 72.3462 3.90907 72.6163 3.80631C73.1081 3.61922 73.6034 3.43082 74.0614 3.22608C74.4262 3.08521 74.774 2.94454 75.108 2.80942C76.1257 2.39776 77.016 2.03764 77.8726 1.88058L77.8885 1.87766L77.9043 1.87371C78.5809 1.7037 79.1991 1.55256 79.7659 1.41399C80.1913 1.30997 80.5878 1.21304 80.9582 1.12054C80.959 1.12035 80.9598 1.12016 80.9605 1.11997L83.124 0.601441L85.0496 8.24717L83.3476 8.95008L83.3461 8.95068L80.9735 9.92174C80.4504 10.0925 79.9565 10.3499 79.4794 10.6264C79.2615 10.7527 79.042 10.8861 78.8237 11.0187L78.7522 11.0622C78.5085 11.2102 78.2648 11.3574 78.0141 11.5002L77.9995 11.5085L77.9855 11.5178C77.6636 11.7311 77.324 11.917 76.9568 12.1179C76.7829 12.2131 76.6029 12.3117 76.4156 12.4181C75.8553 12.7366 75.2673 13.1075 74.7497 13.6131C74.4028 13.9318 74.0262 14.2232 73.6257 14.5331C73.4939 14.6351 73.3595 14.7391 73.2228 14.8467C72.6811 15.273 72.1204 15.7433 71.6398 16.3182L71.634 16.3252L71.6285 16.3323C71.3307 16.7161 70.9998 17.0635 70.6483 17.4326C70.5184 17.5691 70.3856 17.7085 70.2507 17.8538C69.7705 18.3708 69.2844 18.9418 68.925 19.6349L68.8704 19.7173C68.1186 20.8522 67.3337 22.0369 66.8198 23.4021C66.2953 24.3811 65.9709 25.4591 65.6702 26.4638Z"
+							fill="#0059AC" stroke="black" />
+					</svg>
+				</div>
+				<!-- Slider main container -->
+				<div class="swiper comment-slider__swiper">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper comment-slider__swiper-wrapper">
+						<!-- Slides -->
+						<div class="swiper-slide comment-slider__swiper-slide">
+							<div class="comment-slider__text">
+								<p>Richard is so good at what he does. Excellent communication skills made things much simpler
+									and
+									faster. Will continue working with him.</p>
+							</div>
+							<div class="comment-slider__author">Dr. Steve Watson, <span>Greenland Studio in.</span></div>
+						</div>
+						<div class="swiper-slide comment-slider__swiper-slide">
+							<div class="comment-slider__text">
+								<p>Richard is so good at what he does. Excellent communication skills made things much simpler
+									and
+									faster. Will continue working with him.</p>
+							</div>
+							<div class="comment-slider__author">Dr. Steve Watson, <span>Greenland Studio in.</span></div>
+						</div>
+					</div>
+					<!-- If we need pagination -->
+					<div class="swiper-pagination comment-slider__swiper-pagination"></div>
+				</div>
+			</div>
+		</section>
+		<section class="benefit">
+			<div class="benefit__container">
+				<div class="benefit__row">
+					<div class="benefit__image">
+						<img src="@img/home/benefit-2.png" alt="2">
+					</div>
+					<div class="benefit__content">
+						<h3 class="benefit__title">Book your tickets at the comfort of your phone</h3>
+						<div class="benefit__text">
+							<p>Leo elementum ac nisl donec eget turpis gravida. Sit tellus ultricies in urna, odio sagittis est
+								egestas vel. Venenatis amet, tempus porttitor dolor adipiscing nascetur. Neque commodo neque
+								varius tellus diam. Ultrices quam quisque sit eget integer pretium massa congue nunc.</p>
+						</div>
+					</div>
+				</div>
+				<div class="benefit__row benefit__row_reverse">
+					<div class="benefit__image">
+						<img src="@img/home/benefit-1.png" alt="1">
+					</div>
+					<div class="benefit__content">
+						<h3 class="benefit__title">Easily Find awesome places to travel this year</h3>
+						<div class="benefit__text">
+							<p>Leo elementum ac nisl donec eget turpis gravida. Sit tellus ultricies in urna, odio sagittis est
+								egestas vel. Venenatis amet, tempus porttitor dolor adipiscing nascetur. Neque commodo neque
+								varius tellus diam. Ultrices quam quisque sit eget integer pretium massa congue nunc.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="subscribes">
+			<div class="subscribes__container">
+				<div class="subscribes__row">
+					@@include('html/elements/subscribe-card.html'{})
+					@@include('html/elements/subscribe-card.html'{})
+					<div class="subscribe-card">
+						<div class="subscribe-card__body">
+							<div class="subscribe-card__price">$39<span>/month</span></div>
+							<h4 class="subscribe-card__title">Personal</h4>
+							<div class="subscribe-card__text">
+								<p>Our goverment backed plan designed to keep your business legally and secure</p>
+								<p>Our goverment backed plan designed to keep your business legally and secure</p>
+							</div>
+							<ul class="subscribe-card__list">
+								<li class="_icon-tick">Secure your customer usage</li>
+								<li class="_icon-tick">View basic analytics</li>
+								<li class="_icon-tick">Up to 350 customer profiles</li>
+								<li class="_icon-tick">Custom network name</li>
+							</ul>
+							<button class="subscribe-card__button">Your current plan</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="subscribes__bg">
+				<img src="@img/home/footer-bg.png" alt="bg">
+			</div>
+		</section>
+	</main>
+	@@include('html/footer.html', {})
+	<script src="js/app.min.js"></script>
+</body>
+
+</html>

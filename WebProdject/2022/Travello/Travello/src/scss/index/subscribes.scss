@@ -1,0 +1,114 @@
+.subscribes {
+	position: relative;
+	padding: rem(80) 0 rem(650);
+
+	&__container {}
+
+	&__row {
+		display: flex;
+		gap: rem(50);
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	&__bg {
+
+		@extend %imageAbsolute;
+
+		& img {
+			z-index: -1;
+		}
+	}
+}
+
+//Subscribe-card====================
+.subscribe-card {
+	display: flex;
+
+	&__body {
+		background: rgba($color: $mainColor2, $alpha: 0.8);
+		display: flex;
+		flex-direction: column;
+		padding: rem(75) rem(60);
+		border-radius: rem(16);
+		//min-height: 850px;
+		max-width: 430px;
+	}
+
+	&__price {
+		font-family: 'DM Serif Display';
+		font-size: rem(50);
+		letter-spacing: 0.03em;
+		color: #E7E7E7;
+
+		& span {
+			font-family: 'Open Sans';
+			font-size: rem(16);
+			color: #A5ADBB;
+		}
+
+		&+* {
+			margin-top: rem(20);
+		}
+	}
+
+	&__title {
+		font-family: 'Arsenal';
+		font-size: rem(21);
+		color: $mainColor;
+
+		&+* {
+			margin-top: rem(30);
+		}
+	}
+
+	&__text {
+		color: #8991AF;
+		border-bottom: rem(2) solid #8991AF;
+		padding-bottom: 20px;
+		flex: 1 1 auto;
+
+		&+* {
+			margin-top: rem(60);
+		}
+	}
+
+	&__list {
+		//flex: 1 1 auto;
+		color: #8991AF;
+
+		& li+li {
+			margin-top: rem(20);
+		}
+
+		& li::before {
+			margin-right: rem(8);
+			color: $blueColor;
+		}
+
+		&+* {
+			margin-top: rem(250);
+		}
+	}
+
+	&__button {
+		background-color: $blueColor;
+		color: $mainColor;
+		align-self: center;
+		padding: rem(11) rem(66);
+		border-radius: rem(8);
+
+		cursor: pointer;
+		transition: all 0.3s ease;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: rgba($color: #004585, $alpha: 1.0);
+			}
+		}
+
+		@media (max-width: 600px) {
+			padding: rem(11) rem(35);
+		}
+	}
+}

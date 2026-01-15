@@ -1,0 +1,13 @@
+.y {
+  font-size: 100px;
+}
+@media (max-width: 1000px) {
+  .y {
+    font-size: calc(50px + 50 * ((100vw - 900px) / 100));
+  }
+}
+@media (max-width: 900px) {
+  .y {
+    font-size: 50px;
+  }
+}

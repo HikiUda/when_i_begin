@@ -1,0 +1,122 @@
+@use "sass:math";
+
+//Подключение функций=================================================================================================================
+@import "base/function";
+
+// Подключение миксинов==========================================================================================================================
+@import "base/mixin";
+
+// Подключение шрифтов==========================================================================================================================
+//&display=swap - При подключении через плагин
+@import url('https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:wght@400;900&display=swap');
+// font-family: 'Arsenal', sans-serif;
+// font-family: 'DM Serif Display', serif;
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Roboto', sans-serif;
+
+// Подключение локальных файдов шрифта==========================================================================================================
+//@import "fonts/fonts";
+
+// Подключение иконочного шрифтов=========================================================================================================
+@import "fonts/icons";
+
+
+//Шрифт по умолчанию===================================================================================================
+$fontFamily: 'Open Sans', sans-serif;
+$fontSize: rem(16); //где 14px
+
+//Основные цвета================================================================================================================
+$mainColor: #fff;
+$backColor: #09131B;
+$mainColor2: #000;
+$searchColor: #0E0E0E;
+$blueColor: #0059AC;
+$tabColor: #F2C94C;
+
+//НАСТРОЙКИ=============================================================================================================================
+//Минимальная ширина страницы
+$minWidth: 320;
+// Ширина полотна (макета)
+$maxWidth: 1920;
+// Ширина ограничивающего контейнера ( 0 = нет ограничений) без padding
+$clearMaxWidthContainer: 1400;
+//Общий отступ у контайнера
+// справа + слева
+$containerPadding: 30;
+// Ширина ограничивающего контейнера с padding
+$maxWidthContainer: calc($clearMaxWidthContainer + $containerPadding);
+
+// Обнуление и общие параметры=============================================================================================================================
+@import "base/reset";
+
+body {
+	font-weight: 400;
+	font-size: $fontSize;
+	color: $mainColor;
+	background-color: $backColor;
+
+	//Блокировка скролла
+	&._lock {
+		overflow: hidden;
+		touch-action: none;
+	}
+}
+
+//Оболочка
+.wrapper {
+	min-width: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	position: relative;
+
+	>main {
+		flex: 1 1 auto;
+	}
+
+	//Фикс для слайдеров
+	>* {
+		min-width: 0;
+	}
+}
+
+[class*="__container"] {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0 calc($containerPadding / 2) + px;
+}
+
+footer {
+	height: 200px;
+}
+
+//swiper
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-pagination {}
+
+//Общии стили
+@import "common/common";
+@import "base/template";
+@import "common/swiper";
+
+//Header и Footer
+@import "header";
+@import "footer";
+
+//Все осттальные стили======================================================================================================================================
+
+
+@import "index/intro";
+@import "index/hotel-tab";
+@import "index/comment-slider";
+@import "index/benefit";
+@import "index/subscribes";
+
+//Element
+@import "elements/hotel-card";

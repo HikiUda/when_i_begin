@@ -1,0 +1,7 @@
+@mixin simpleText($fw, $fz, $cl: var(--text-color)) {
+	font-weight: $fw;
+	font-size: $fz;
+	line-height: 1.5;
+	color: $cl;
+	opacity: 0.5;
+}

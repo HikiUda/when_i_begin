@@ -1,0 +1,88 @@
+.footer {
+	@include adaptivValue("margin-top", -170, -280, 1);
+
+	&__container {}
+
+	&__row-up {
+		text-align: center;
+
+		&+* {
+			@include adaptivValue("margin-top", 130, 50, 1);
+		}
+	}
+
+	&__logo {
+		&+* {
+			margin-top: rem(20);
+		}
+	}
+
+	&__email {
+		display: block;
+		font-family: 'Roboto';
+		font-size: rem(24);
+		text-decoration-line: underline;
+		color: #8991AF;
+
+		&+* {
+			margin-top: rem(30);
+		}
+	}
+
+	&__address {
+		display: block;
+		font-family: 'Roboto';
+		font-size: rem(14);
+		color: #8991AF;
+
+		&+* {
+			margin-top: rem(20);
+		}
+	}
+
+	&__tel {
+		display: block;
+		font-family: 'Roboto';
+		font-size: rem(14);
+		color: #8991AF;
+
+		&+* {
+			margin-top: rem(40);
+		}
+	}
+
+	&__messagers {
+
+		display: inline-flex;
+		gap: 40px;
+	}
+
+	&__messenger {
+		color: #8991AF;
+
+	}
+
+	&__row-bottom {
+		padding: rem(60) 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(15);
+	}
+
+	&__cooperate {
+		font-size: rem(17);
+		color: #8991AF;
+
+	}
+
+	&__design-by {
+		font-size: rem(17);
+		color: #8991AF;
+
+		& span {
+			font-weight: 700;
+		}
+	}
+}

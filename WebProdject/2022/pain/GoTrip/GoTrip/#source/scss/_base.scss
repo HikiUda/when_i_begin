@@ -1,0 +1,77 @@
+:root {
+	--accent-color: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%), #FFFFFF;
+	--home-bg-color: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%), #204434;
+	--elemnt-color: #4E887A;
+	--text-color: #0F1F1C;
+	--width-container: 1240px;
+}
+
+$cl: #0F1F1C;
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	font-size: 25px;
+	background-color: #F6F6F6;
+
+	&._lock {
+		overflow: hidden;
+	}
+}
+
+[class*="__container"] {
+	max-width: calc(var(--width-container) + 30px);
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+.orange-button {
+	font-size: 20px;
+	font-weight: 600;
+	color: #FEFEFE;
+	background: linear-gradient(129.54deg, #FF7B4E 15.57%, #FF584E 95.03%);
+	border-radius: 27px;
+	padding: 25px 45px;
+
+	@media(any-hover: hover) {
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			background: rgba($color: #000000, $alpha: 0.2);
+			width: 100%;
+			height: 100%;
+			transition: all 0.3s linear;
+			opacity: 0;
+		}
+
+		&:hover::before {
+			opacity: 1;
+		}
+	}
+}
+
+.title-semibold {
+	font-weight: 600;
+	font-size: 55px;
+	line-height: 1.5;
+	color: var(--text-color);
+}
+
+.title-medium {
+	font-weight: 500;
+	font-size: 45px;
+	line-height: 1.5;
+	color: var(--text-color);
+}
+
+.swiper {}
+
+.swiper-wrapper {}
+
+.swiper-slide {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}

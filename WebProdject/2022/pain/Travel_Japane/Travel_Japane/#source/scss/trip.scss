@@ -1,0 +1,130 @@
+//TRIP===========================================
+.main {
+
+	&__trip {}
+}
+
+.trip {
+	margin: 0 0 130px 0;
+
+	&__container {}
+
+	&__up-row {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 0 0 46px 0;
+	}
+
+	&__title {
+		@extend %block-title;
+		@extend %title-blue-line;
+		position: relative;
+	}
+
+	&__link {
+		@extend %blue-arrow;
+	}
+
+	&__middle-row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -5px;
+	}
+
+	&__middle-column {
+		flex: 0 0 50%;
+		padding: 0 5px;
+		height: 354px;
+		overflow: hidden;
+		margin: 0 0 10px 0;
+	}
+
+	&__tile {
+		position: relative;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__tile::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: 3;
+		opacity: 0;
+		transition: all 0.3s ease;
+	}
+
+	&__tile:hover::before {
+		opacity: 1;
+	}
+
+	&__tile img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+
+	}
+
+	&__place {
+		position: absolute;
+		left: 30px;
+		bottom: -50%;
+		z-index: 4;
+		font-weight: 700;
+		font-size: 50px;
+		line-height: 1.2px;
+		color: #FFFFFF;
+		opacity: 0;
+		transition: all 0.3s ease;
+	}
+
+	&__tile:hover &__place {
+		bottom: 50px;
+		opacity: 1;
+	}
+
+	&__lower-row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -5px;
+	}
+
+	&__lower-column {
+		flex: 0 0 33.333%;
+		padding: 0 5px;
+		height: 283px;
+		overflow: hidden;
+	}
+
+	@media(max-width: 991px) {
+		&__lower-column {
+			flex: 0 0 50%;
+			margin: 0 0 10px 0;
+		}
+	}
+
+	@media(max-width: 767px) {
+		margin: 0 0 50px 0;
+
+		&__lower-column {
+			flex: 0 0 100%;
+		}
+
+		&__middle-column {
+			flex: 0 0 100%;
+		}
+
+		&__up-row {
+			flex-direction: column;
+		}
+
+		&__title {
+			margin: 0 0 30px 0;
+		}
+	}
+}

@@ -1,0 +1,108 @@
+//TOTTORI=====================================================
+.main {
+
+	&__tottori {}
+}
+
+.tottori {
+	margin: 0 0 130px 0;
+
+	&__container {}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -35px 77px;
+	}
+
+	&__row-reverse {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row-reverse;
+		margin: 0 -35px;
+	}
+
+	&__column {
+		flex: 0 0 50%;
+		padding: 0 35px;
+		height: 354px;
+		overflow: auto;
+		display: flex;
+		align-items: center;
+	}
+
+	&__ploto {
+		height: 100%;
+		width: 100%;
+	}
+
+	&__ploto img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+	}
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		padding: 10px 50px;
+	}
+
+	&__title {
+		@extend %block-title;
+		font-size: 30px;
+		line-height: 1.33;
+		margin: 0 0 85px 0;
+		max-width: 355px;
+	}
+
+	&__text {
+		color: #102746;
+		margin: 0 0 58px 0;
+	}
+
+	&__link {
+		@extend %blue-arrow
+	}
+
+	@media(max-width: 1200px) {
+		&__column {
+			padding: 0;
+		}
+
+		&__row {
+			margin: 0 0px 77px;
+		}
+
+		&__row-reverse {
+			margin: 0 0px 77px;
+		}
+	}
+
+	@media(max-width: 991px) {
+		&__column {
+			flex: 0 0 100%;
+		}
+	}
+
+	@media(max-width: 676px) {
+		margin: 0 0 50px 0;
+
+		&__ploto {
+			margin: 0 0 20px 0;
+		}
+
+		&__column {
+			height: auto;
+		}
+
+		&__body {
+			padding: 10px;
+		}
+
+		&__title {
+			margin: 0 0 20px 0;
+			font-size: 24px;
+		}
+	}
+}

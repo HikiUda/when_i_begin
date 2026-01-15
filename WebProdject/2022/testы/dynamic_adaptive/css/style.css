@@ -1,0 +1,27 @@
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.block-1 {
+	display: flex;
+	gap: 20px;
+}
+
+.item-block-1 {
+	width: 50px;
+	height: 50px;
+	background-color: #000;
+}
+
+.block-2 {
+	display: flex;
+	gap: 20px;
+}
+
+.item-block-2 {
+	width: 50px;
+	height: 50px;
+	background-color: #5555f5;
+}

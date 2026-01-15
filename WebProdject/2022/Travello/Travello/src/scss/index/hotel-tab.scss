@@ -1,0 +1,80 @@
+.hotel-tab {
+	margin-bottom: rem(-10);
+
+	&+* {
+		@include adaptivValue("margin-top", 230, 50, 1);
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__buttons {
+		display: flex;
+		gap: rem(20);
+		justify-content: center;
+		flex-wrap: wrap;
+
+		&+* {
+			@include adaptivValue("margin-top", 60, 20, 1);
+		}
+	}
+
+	&__button {
+		font-weight: 700;
+		font-size: rem(14);
+		color: $mainColor;
+		padding: rem(2) rem(4);
+
+		&._active {
+			color: $backColor;
+			background-color: $tabColor;
+			border-radius: rem(4);
+		}
+	}
+
+	&__content {
+		&+* {
+			@include adaptivValue("margin-top", 80, 20, 1);
+		}
+	}
+
+	&__item {
+		display: none;
+
+		&._active {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			@include adaptivValue("gap", 40, 20, 1);
+
+			&>* {
+				flex: 0 1 320px;
+
+			}
+		}
+	}
+
+	&__view-all {
+		display: inline-block;
+		font-family: 'Roboto';
+		font-weight: 900;
+		font-size: rem(15);
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		color: $mainColor;
+		padding: rem(14) rem(37);
+
+		border: rem(2) solid $mainColor;
+		text-align: center;
+		transition: opacity 0.3s ease;
+
+		@media (any-hover: hover) {
+			&:hover {
+				opacity: 0.6;
+			}
+		}
+	}
+}

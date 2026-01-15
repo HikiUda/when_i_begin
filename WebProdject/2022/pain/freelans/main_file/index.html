@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/style.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<form action="#" method="post" enctype="multipart/form-data">
+		<div>
+			<h2><label for="username">Как велечают вас?</label></h2>
+			<p><input type="text" tabindex="1" name="username"></p>
+		</div>
+		<div>
+			<h3>Чем на хлеб зарабатываете?</h3>
+			<p><input type="radio" name="person_class" tabindex="2" checked> Воин</p>
+			<p><input type="radio" name="person_class" tabindex="2"> Маг</p>
+			<p><input type="radio" name="person_class" tabindex="2"> Целитель</p>
+			<p><input type="radio" name="person_class" tabindex="2"> Планктон</p>
+		</div>
+		<div>
+			<h2>Поведайте о себе</h2>
+			<textarea name="resume" cols="30" rows="10" tabindex="3"></textarea>
+		</div>
+		<div>
+			<h3>Чем распологаете</h3>
+			<div>
+				<h4>Ваш транспорт</h4>
+				<select tabindex='4' name="machine">
+					<option selected value="horse">Далахан</option>
+					<option value="car">Железный конь</option>
+					<option value="rade">Осадная машина</option>
+				</select>
+			</div>
+			<div>
+				<h3>Из родни</h3>
+				<select name="relativse" tabindex="5">
+					<option value="family">Семья</option>
+					<option value="lonely">Холост</option>
+					<option value="sister">Младшая сестра</option>
+				</select>
+			</div>
+		</div>
+		<div>
+			<h3>Оставте нам ваши контактные данные</h3>
+			<p><input type="tel" tabindex="6" name="tel" placeholder="Телефон"></p>
+			<p><input type="email" name="useremail" tabindex="7" placeholder="Почта"></p>
+			<p><input type="password" name="pass" tabindex="8" placeholder="Секретное слово"></p>
+			<h4>Ваш любимый цвет</h4>
+			<p><input type="color" name="f_color" tabindex="9"></p>
+			<h4>Ваше фото</h4>
+			<p><input type="file" name="photo" tabindex="10"></p>
+		</div>
+		<div>
+			<button type="submit">Отправить</button>
+			<button type="reset">Очистить</button>
+		</div>
+	</form>
+</body>
+
+</html>

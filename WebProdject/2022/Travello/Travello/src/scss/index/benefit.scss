@@ -1,0 +1,65 @@
+.benefit {
+	&+* {
+		@include adaptivValue("margin-top", 130, 50, 1);
+	}
+
+	&__container {
+		max-width: 1230px;
+		display: flex;
+		flex-direction: column;
+		gap: 95px;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		gap: 45px;
+
+		&_reverse {
+			flex-direction: row-reverse;
+		}
+
+		@media(max-width: 1050px) {
+			flex-direction: column;
+		}
+	}
+
+	&__image {
+		position: relative;
+		@include adaptivValue("height", 380, 190, 3, 1050, 320);
+		@include adaptivValue("width", 640, 320, 3, 1050, 320);
+
+		@extend %imageAbsolute;
+
+		@media(min-width: 1050px) {
+			flex: 0 0 50%;
+		}
+	}
+
+	&__content {
+		max-width: 550px;
+
+		@media(min-width: 1050px) {
+			flex: 0 0 45%;
+		}
+	}
+
+	&__title {
+		font-family: 'Arsenal';
+		@include adaptivValue("font-size", 48, 30, 1);
+		line-height: 1.25;
+		color: $mainColor;
+
+		&+* {
+			margin-top: 15px;
+		}
+	}
+
+	&__text {
+		font-size: rem(17);
+		line-height: 1.7;
+
+		color: #8991AF;
+
+	}
+}
