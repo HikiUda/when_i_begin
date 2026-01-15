@@ -1,0 +1,24 @@
+{
+	"name": "part-3-1-exercises",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"start": "node index.js",
+		"dev": "nodemon index.js",
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build:ui": "rm -rf build && cd ../../part1-1/part1/ && npm run build && cp -r build ../../part-3/part-3-1-exercises",
+		"deploy:full": "npm run build:ui && git add . && git commit -m uibuild && git push origin master"
+	},
+	"author": "Dima",
+	"license": "ISC",
+	"devDependencies": {
+		"express": "^4.18.2",
+		"nodemon": "^2.0.20"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"morgan": "^1.10.0",
+		"pg": "^8.8.0"
+	}
+}

@@ -1,0 +1,1 @@
+Conect with CockroachDB = "postgresql://wendsew:_15yZx79YybPd5gFMWkr7g@comely-horgi-2064.7s5.cockroachlabs.cloud:26257/defaultdb?sslmode=verify-full"

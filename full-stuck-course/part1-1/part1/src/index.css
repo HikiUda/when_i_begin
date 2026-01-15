@@ -1,0 +1,9 @@
+.success-add,
+.error-server {
+	padding: 10px;
+	border: 2px solid rgb(46, 48, 192);
+	background-color: rgb(185, 187, 245);
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 20px;
+}
