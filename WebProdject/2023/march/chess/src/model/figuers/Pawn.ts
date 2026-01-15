@@ -1,0 +1,58 @@
+import { Cell } from '../Cell';
+import { Colors } from '../Colors';
+import { Figure, FigureNames } from './Figure';
+import blackLogo from '../../assets/black-pawn.png';
+import whiteLogo from '../../assets/white-pawn.png';
+import { Queen } from './Queen';
+
+export class Pawn extends Figure {
+   constructor(color: Colors, cell: Cell) {
+      super(color, cell);
+      this.logo = color === Colors.BLACK ? blackLogo : whiteLogo;
+      this.name = FigureNames.PAWN;
+   }
+   canMove(target: Cell): boolean {
+      if (!super.canMove(target)) {
+         return false;
+      }
+
+      //&& this.cell.board.getCell(this.cell.x + direction, this.cell.y + direction).isEmpty()
+
+      const direction = this.color === Colors.BLACK ? 1 : -1;
+      const firstStepDirection = this.color === Colors.BLACK ? 2 : -2;
+
+      if (!this.cell.board.getCell(this.cell.x, this.cell.y + direction).isEmpty()) {
+         return false;
+      }
+
+      if (
+         (target.y === this.cell.y + direction ||
+            (this.isFirstStep && target.y === this.cell.y + firstStepDirection)) &&
+         target.x === this.cell.x &&
+         this.cell.board.getCell(target.x, target.y).isEmpty()
+      ) {
+         // (1 || (2 && 3)) && 4 && 5
+         return true;
+      }
+
+      if (
+         target.y === this.cell.y + direction &&
+         (target.x === this.cell.x + 1 || target.x === this.cell.x - 1) &&
+         this.cell.isEnemy(target)
+      ) {
+         return true;
+      }
+
+      return false;
+   }
+
+   moveFigure(target: Cell): void {
+      super.moveFigure(target);
+      const andOfTheRoad = this.color === Colors.BLACK ? 7 : 0;
+      if (target.y === andOfTheRoad) {
+         console.log('end');
+
+         target.figure = new Queen(this.color, target);
+      }
+   }
+}

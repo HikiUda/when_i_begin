@@ -1,0 +1,26 @@
+body {
+   font-family: 'Inter', sans-serif;
+   font-size: 16px;
+
+   &._lock {
+      overflow: hidden;
+   }
+}
+
+.wrapper {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   min-height: 100%;
+}
+
+.main {
+   flex: 1 1 auto;
+   position: relative;
+}
+
+.__container {
+   max-width: 1000px;
+   padding: 0 10px;
+   margin: 0 auto;
+}
