@@ -1,0 +1,95 @@
+$color-darker: #262C27;
+$color-green: #B9C400;
+$color-blue: #0093A1;
+$color-white: #ffffff;
+
+//=================================
+
+body {
+	font-family: Inter, sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: #262C27;
+	line-height: 1.1;
+}
+
+[class*="__container"] {
+	max-width: 1230px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+//LOGO
+.logo {
+	& svg {
+		fill: $color-darker;
+		transition: all 0.3s linear;
+
+		& path,
+		& rect {
+			transition: all 0.3s linear;
+		}
+
+		&:hover {
+			fill: $color-blue;
+
+			& path,
+			& rect {
+				fill: $color-blue;
+			}
+		}
+	}
+}
+
+// VIDEO-BTN
+.video-btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	& span {
+		display: none;
+	}
+
+	& span._active {
+		display: block;
+	}
+
+}
+
+.video-btn__button {
+	width: 70px;
+	height: 70px;
+	display: none;
+
+	& path {
+		fill: $color-white;
+		transition: all 0.3s ease;
+	}
+
+	&:hover path {
+		fill: $color-green;
+	}
+
+	& circle {
+		stroke: $color-white;
+		transition: all 0.3s ease;
+	}
+
+	&:hover circle {
+		stroke: $color-green;
+	}
+
+	&._active {
+		display: block;
+	}
+
+	& svg {
+		max-width: 100%;
+		max-height: 100%;
+	}
+
+	&+* {
+		margin-top: 10px;
+	}
+}

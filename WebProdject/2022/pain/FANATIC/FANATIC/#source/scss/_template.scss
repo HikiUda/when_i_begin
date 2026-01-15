@@ -1,0 +1,25 @@
+%buy-btn {
+	//display: inline-block;
+	font-family: Comfortaa, sans-serif;
+	font-weight: 700;
+	transition: all 0.3s linear;
+	text-transform: uppercase;
+
+	@media(any-hover: hover) {
+		&:hover {
+			border: none;
+			background: $color-green;
+			color: $color-darker;
+		}
+	}
+
+}
+
+@mixin regularTitle($cl) {
+	font-family: Comfortaa, sans-serif;
+	font-weight: 400;
+	font-size: clamp(3.125rem, 3.021rem + 0.6vw, 3.75rem);
+	line-height: 1.1;
+	color: $cl;
+
+}

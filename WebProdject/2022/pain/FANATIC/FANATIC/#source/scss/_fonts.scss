@@ -1,0 +1,58 @@
+@font-face {
+	font-family: 'Comfortaa';
+	src: url('../../fonts/Comfortaa/Comfortaa-Bold/Comfortaa-Bold.woff2') format('woff2'),
+		url('../../fonts/Comfortaa/Comfortaa-Bold/Comfortaa-Bold.woff') format('woff'),
+		url('../../fonts/Comfortaa/Comfortaa-Bold/Comfortaa-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Comfortaa';
+	src:
+		url('../../fonts/Comfortaa/Comfortaa-Regular/Comfortaa-Regular.woff2') format('woff2'),
+		url('../../fonts/Comfortaa/Comfortaa-Regular/Comfortaa-Regular.woff') format('woff'),
+		url('../../fonts/Comfortaa/Comfortaa-Regular/Comfortaa-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('../../fonts/inter/Inter-Bold/Inter-Bold.woff2') format('woff2'),
+		url('../../fonts/inter/Inter-Bold/Inter-Bold.woff') format('woff'),
+		url('../../fonts/inter/Inter-Bold/Inter-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('../../fonts/inter/Inter-ExtraBoldItalic/Inter-ExtraBoldItalic.woff2') format('woff2'),
+		url('../../fonts/inter/Inter-ExtraBoldItalic/Inter-ExtraBoldItalic.woff') format('woff'),
+		url('../../fonts/inter/Inter-ExtraBoldItalic/Inter-ExtraBoldItalic.ttf') format('truetype');
+	font-weight: 800;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('../../fonts/inter/Inter-ExtraLightItalicBETA/Inter-ExtraLightItalicBETA.woff2') format('woff2'),
+		url('../../fonts/inter/Inter-ExtraLightItalicBETA/Inter-ExtraLightItalicBETA.woff') format('woff'),
+		url('../../fonts/inter/Inter-ExtraLightItalicBETA/Inter-ExtraLightItalicBETA.ttf') format('truetype');
+	font-weight: 200;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Inter';
+	src:
+		url('../../fonts/inter/Inter-Regular/Inter-Regular.woff2') format('woff2'),
+		url('../../fonts/inter/Inter-Regular/Inter-Regular.woff') format('woff'),
+		url('../../fonts/inter/Inter-Regular/Inter-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
