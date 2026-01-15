@@ -1,0 +1,200 @@
+/*Обнуление*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+	display: block;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button {
+	cursor: pointer;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+a,
+a:visited {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+/*--------------------*/
+
+body {
+	padding: 20px;
+	font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+
+.fon {
+	height: 1064px;
+	background: url('../img/ellipse_1_copy_4.jpg') center/cover no-repeat;
+}
+
+._h3 {
+	text-align: center;
+	opacity: 0.6;
+	font-family: Arial;
+	line-height: 40px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: #273d46;
+}
+
+._h1 {
+	margin-left: 250px;
+	width: 725px;
+	text-align: center;
+	font-size: 36px;
+	line-height: 50px;
+	color: #273d46;
+}
+
+.run_man {
+	margin: 50px 0 0 0;
+	height: 561px;
+	background:
+		url('../img/light_man_copy_26.jpg') center no-repeat,
+		url('../img/layer_1_27.jpg') center no-repeat;
+}
+
+.main_text {
+	opacity: 0.8;
+	font-size: 24px;
+	line-height: 40px;
+	color: #273d46;
+
+	margin: -200px 0 0 250px;
+	width: 725px;
+}
+
+.p_p {
+	margin-bottom: 30px;
+}
+
+.lict_main {
+	margin: 0 0 50px 0;
+}
+
+.lict_main li {
+	margin: 0 0 15px 0;
+	background: url('../img/icons/li.svg') left 5px no-repeat;
+	padding: 0 0 0 30px;
+}
+
+.list_1 {
+	font-family: Arial;
+	font-size: 20px;
+	line-height: 36px;
+	text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+	color: #273d46;
+}
+
+.list_2 {
+	font-family: Arial;
+	font-size: 20px;
+	line-height: 36px;
+	font-style: italic;
+	color: #80b7b3;
+}
+
+.list_3 {
+	font-family: Arial;
+	font-size: 20px;
+	line-height: 36px;
+	font-weight: 700;
+	color: #273d46;
+}
+
+.list_4 {
+	opacity: 0.3;
+	font-family: Arial;
+	font-size: 20px;
+	line-height: 36px;
+	text-decoration: line-through;
+	color: #273d46;
+}
+
+.main_link {}
+
+.link_to {
+	display: block;
+	height: 44px;
+	background: url('../img/rounded_rectangle_1_7.jpg') -30px -25px no-repeat;
+	font-family: Arial;
+	font-size: 14px;
+	line-height: 40px;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	color: #000000;
+	padding: 0 0 0px 40px;
+}
