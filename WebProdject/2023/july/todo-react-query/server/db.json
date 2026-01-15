@@ -1,0 +1,24 @@
+{
+  "todos": [
+    {
+      "completed": false,
+      "id": 1,
+      "content": "Купить Молоко"
+    },
+    {
+      "completed": true,
+      "id": 2,
+      "content": "Купить Орехов"
+    },
+    {
+      "content": "Покушать",
+      "completed": false,
+      "id": 3
+    },
+    {
+      "content": "Посмотреть Фиксиков",
+      "completed": false,
+      "id": 4
+    }
+  ]
+}
